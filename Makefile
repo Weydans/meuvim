@@ -1,4 +1,5 @@
 run: 
+	sudo apt update && sudo apt upgrade -y
 	sudo apt remove -y vim
 	sudo apt purge -y vim
 	rm -rf ~/.vim ~/.vimrc ~/.viminfo

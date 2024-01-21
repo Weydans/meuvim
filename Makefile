@@ -1,11 +1,13 @@
 run: 
+	sudo apt remove -y vim
+	sudo apt purge -y vim
+	rm -rf ~/.vim ~/.vimrc ~/.viminfo
 	sudo apt install -y git vim nodejs ripgrep
 	ls ~/.fzf || git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 	ls ~/.fzf || echo "if type rg &> /dev/null; then" >> ~/.bashrc
 	ls ~/.fzf || echo "  export FZF_DEFAULT_COMMAND='rg --files'" >> ~/.bashrc
 	ls ~/.fzf || echo "  export FZF_DEFAULT_OPTS='-m --height 50% --border'" >> ~/.bashrc
 	ls ~/.fzf || echo "fi" >> ~/.bashrc
-	rm -rf ~/.vimrc ~/.vim/pack 
 	mkdir -p ~/.vim/pack/plugins/start
 	mkdir -p ~/.vim/pack/coc/start
 	git clone https://github.com/ctrlpvim/ctrlp.vim ~/.vim/pack/plugins/start/ctrlp.vim

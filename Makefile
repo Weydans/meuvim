@@ -59,7 +59,7 @@ run:
 	echo "filetype plugin on" >> ~/.vimrc
 	echo "let g:NERDSpaceDelims = 1" >> ~/.vimrc
 	echo "let g:NERDDefaultAlign = 'left'" >> ~/.vimrc
-	echo "map cc <Plug>NERDCommenterInvert" >> ~/.vimrc
+	echo "map <C-_> <Plug>NERDCommenterInvert" >> ~/.vimrc
 	echo "set rtp+=~/.fzf" >> ~/.vimrc
 	echo "packadd! fzf.vim" >> ~/.vimrc
 	echo "let $FZF_DEFAULT_COMMAND = 'rg -l \"\"'" >> ~/.vimrc

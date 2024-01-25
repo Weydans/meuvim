@@ -11,6 +11,7 @@ run:
 	ls ~/.fzf || echo "fi" >> ~/.bashrc
 	mkdir -p ~/.vim/pack/plugins/start
 	mkdir -p ~/.vim/pack/coc/start
+	git clone https://github.com/vim-vdebug/vdebug.git ~/.vim/pack/plugins/start/vdebug
 	git clone https://github.com/ctrlpvim/ctrlp.vim ~/.vim/pack/plugins/start/ctrlp.vim
 	git clone https://github.com/mattn/emmet-vim ~/.vim/pack/plugins/start/emmet-vim
 	git clone https://github.com/preservim/nerdcommenter ~/.vim/pack/plugins/start/nerdcommenter

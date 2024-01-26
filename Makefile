@@ -3,7 +3,7 @@ run:
 	sudo apt remove -y vim
 	sudo apt purge -y vim
 	rm -rf ~/.vim ~/.vimrc ~/.viminfo
-	sudo apt install -y git vim nodejs ripgrep
+	sudo apt install -y git vim vim-nox nodejs ripgrep
 	ls ~/.fzf || git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 	ls ~/.fzf || echo "if type rg &> /dev/null; then" >> ~/.bashrc
 	ls ~/.fzf || echo "  export FZF_DEFAULT_COMMAND='rg --files'" >> ~/.bashrc
@@ -155,10 +155,11 @@ run:
 	echo 'nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>' >> ~/.vimrc
 
 # IMPORTANTE
+# Instalar extensão xdebug helper no chrome
 # rodar os comandos abaixo no vim após a instalação
 # 
 # CocInstall coc-tsserver coc-phpls
 # :packadd fzf
 # :packadd fzf.vim
 # :call fzf#install()
-
+# :helptags ~/.vim/pack/plugins/start/vdebug/doc

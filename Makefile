@@ -3,7 +3,9 @@ run:
 	sudo apt remove -y vim
 	sudo apt purge -y vim
 	rm -rf ~/.vim ~/.vimrc ~/.viminfo
-	sudo apt install -y git vim vim-nox nodejs ripgrep
+	sudo apt install -y git nodejs ripgrep ncurses-dev python3
+	git clone https://github.com/vim/vim.git ~/vim
+	cd ~/vim && git pull && cd ~/vim/src && make && sudo make install
 	ls ~/.fzf || git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 	ls ~/.fzf || echo "if type rg &> /dev/null; then" >> ~/.bashrc
 	ls ~/.fzf || echo "  export FZF_DEFAULT_COMMAND='rg --files'" >> ~/.bashrc

@@ -4,6 +4,7 @@ run:
 	sudo apt purge -y vim
 	rm -rf ~/.vim ~/.vimrc ~/.viminfo
 	sudo apt install -y git nodejs ripgrep ncurses-dev
+	# Install vim
 	wget -O ~/Downloads/libpython3.11-minimal_3.11.4-1~23.04.2_amd64.deb http://security.ubuntu.com/ubuntu/pool/main/p/python3.11/libpython3.11-minimal_3.11.4-1~23.04.2_amd64.deb
 	wget -O ~/Downloads/libpython3.11-stdlib_3.11.4-1~23.04.2_amd64.deb http://security.ubuntu.com/ubuntu/pool/main/p/python3.11/libpython3.11-stdlib_3.11.4-1~23.04.2_amd64.deb
 	wget -O ~/Downloads/libpython3.11_3.11.4-1~23.04.2_amd64.deb http://security.ubuntu.com/ubuntu/pool/main/p/python3.11/libpython3.11_3.11.4-1~23.04.2_amd64.deb
@@ -17,6 +18,7 @@ run:
 	sudo dpkg -i ~/Downloads/vim-common_9.0.1000-4ubuntu3.3_all.deb
 	sudo dpkg -i ~/Downloads/vim_9.0.1000-4ubuntu3.3_amd64.deb
 	rm -rf ~/Downloads/libpython3.11-minimal_3.11.4-1~23.04.2_amd64.deb ~/Downloads/libpython3.11-stdlib_3.11.4-1~23.04.2_amd64.deb ~/Downloads/libpython3.11_3.11.4-1~23.04.2_amd64.deb ~/Downloads/vim-runtime_9.0.1000-4ubuntu3.3_all.deb ~/Downloads/vim-common_9.0.1000-4ubuntu3.3_all.deb ~/Downloads/vim_9.0.1000-4ubuntu3.3_amd64.deb
+	# Install vim plugins
 	ls ~/.fzf || git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 	ls ~/.fzf || echo "if type rg &> /dev/null; then" >> ~/.bashrc
 	ls ~/.fzf || echo "  export FZF_DEFAULT_COMMAND='rg --files'" >> ~/.bashrc
@@ -39,6 +41,7 @@ run:
 	ls ~/.fonts || mkdir ~/.fonts
 	cp ~/meuvim/DroidSansMNerdFontMono-Regular.otf ~/.fonts/
 	fc-cache	
+	# Create .vimrc
 	touch ~/.vimrc
 	echo "syntax on" >> ~/.vimrc
 	echo "set autoindent" >> ~/.vimrc

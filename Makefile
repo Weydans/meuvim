@@ -4,20 +4,22 @@ run:
 	sudo apt purge -y vim
 	rm -rf ~/.vim ~/.vimrc ~/.viminfo
 	sudo apt install -y git nodejs ripgrep ncurses-dev
-	# Install vim
-	wget -O ~/Downloads/libpython3.11-minimal_3.11.4-1~23.04.2_amd64.deb http://security.ubuntu.com/ubuntu/pool/main/p/python3.11/libpython3.11-minimal_3.11.4-1~23.04.2_amd64.deb
-	wget -O ~/Downloads/libpython3.11-stdlib_3.11.4-1~23.04.2_amd64.deb http://security.ubuntu.com/ubuntu/pool/main/p/python3.11/libpython3.11-stdlib_3.11.4-1~23.04.2_amd64.deb
-	wget -O ~/Downloads/libpython3.11_3.11.4-1~23.04.2_amd64.deb http://security.ubuntu.com/ubuntu/pool/main/p/python3.11/libpython3.11_3.11.4-1~23.04.2_amd64.deb
-	wget -O ~/Downloads/vim_9.0.1000-4ubuntu3.3_amd64.deb http://security.ubuntu.com/ubuntu/pool/main/v/vim/vim_9.0.1000-4ubuntu3.3_amd64.deb
-	wget -O ~/Downloads/vim-common_9.0.1000-4ubuntu3.3_all.deb http://security.ubuntu.com/ubuntu/pool/main/v/vim/vim-common_9.0.1000-4ubuntu3.3_all.deb
-	wget -O ~/Downloads/vim-runtime_9.0.1000-4ubuntu3.3_all.deb http://security.ubuntu.com/ubuntu/pool/main/v/vim/vim-runtime_9.0.1000-4ubuntu3.3_all.deb
-	sudo dpkg -i ~/Downloads/libpython3.11-minimal_3.11.4-1~23.04.2_amd64.deb
-	sudo dpkg -i ~/Downloads/libpython3.11-stdlib_3.11.4-1~23.04.2_amd64.deb
-	sudo dpkg -i ~/Downloads/libpython3.11_3.11.4-1~23.04.2_amd64.deb
-	sudo dpkg -i ~/Downloads/vim-runtime_9.0.1000-4ubuntu3.3_all.deb
-	sudo dpkg -i ~/Downloads/vim-common_9.0.1000-4ubuntu3.3_all.deb
-	sudo dpkg -i ~/Downloads/vim_9.0.1000-4ubuntu3.3_amd64.deb
-	rm -rf ~/Downloads/libpython3.11-minimal_3.11.4-1~23.04.2_amd64.deb ~/Downloads/libpython3.11-stdlib_3.11.4-1~23.04.2_amd64.deb ~/Downloads/libpython3.11_3.11.4-1~23.04.2_amd64.deb ~/Downloads/vim-runtime_9.0.1000-4ubuntu3.3_all.deb ~/Downloads/vim-common_9.0.1000-4ubuntu3.3_all.deb ~/Downloads/vim_9.0.1000-4ubuntu3.3_amd64.deb
+	# Install vim ^8
+	sudo apt install -y vim 
+	# Install vim 9
+	# wget -O ~/Downloads/libpython3.11-minimal_3.11.4-1~23.04.2_amd64.deb http://security.ubuntu.com/ubuntu/pool/main/p/python3.11/libpython3.11-minimal_3.11.4-1~23.04.2_amd64.deb
+	# wget -O ~/Downloads/libpython3.11-stdlib_3.11.4-1~23.04.2_amd64.deb http://security.ubuntu.com/ubuntu/pool/main/p/python3.11/libpython3.11-stdlib_3.11.4-1~23.04.2_amd64.deb
+	# wget -O ~/Downloads/libpython3.11_3.11.4-1~23.04.2_amd64.deb http://security.ubuntu.com/ubuntu/pool/main/p/python3.11/libpython3.11_3.11.4-1~23.04.2_amd64.deb
+	# wget -O ~/Downloads/vim_9.0.1000-4ubuntu3.3_amd64.deb http://security.ubuntu.com/ubuntu/pool/main/v/vim/vim_9.0.1000-4ubuntu3.3_amd64.deb
+	# wget -O ~/Downloads/vim-common_9.0.1000-4ubuntu3.3_all.deb http://security.ubuntu.com/ubuntu/pool/main/v/vim/vim-common_9.0.1000-4ubuntu3.3_all.deb
+	# wget -O ~/Downloads/vim-runtime_9.0.1000-4ubuntu3.3_all.deb http://security.ubuntu.com/ubuntu/pool/main/v/vim/vim-runtime_9.0.1000-4ubuntu3.3_all.deb
+	# sudo dpkg -i ~/Downloads/libpython3.11-minimal_3.11.4-1~23.04.2_amd64.deb
+	# sudo dpkg -i ~/Downloads/libpython3.11-stdlib_3.11.4-1~23.04.2_amd64.deb
+	# sudo dpkg -i ~/Downloads/libpython3.11_3.11.4-1~23.04.2_amd64.deb
+	# sudo dpkg -i ~/Downloads/vim-runtime_9.0.1000-4ubuntu3.3_all.deb
+	# sudo dpkg -i ~/Downloads/vim-common_9.0.1000-4ubuntu3.3_all.deb
+	# sudo dpkg -i ~/Downloads/vim_9.0.1000-4ubuntu3.3_amd64.deb
+	# rm -rf ~/Downloads/libpython3.11-minimal_3.11.4-1~23.04.2_amd64.deb ~/Downloads/libpython3.11-stdlib_3.11.4-1~23.04.2_amd64.deb ~/Downloads/libpython3.11_3.11.4-1~23.04.2_amd64.deb ~/Downloads/vim-runtime_9.0.1000-4ubuntu3.3_all.deb ~/Downloads/vim-common_9.0.1000-4ubuntu3.3_all.deb ~/Downloads/vim_9.0.1000-4ubuntu3.3_amd64.deb
 	# Install vim plugins
 	ls ~/.fzf || git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 	ls ~/.fzf || echo "if type rg &> /dev/null; then" >> ~/.bashrc
@@ -61,6 +63,7 @@ run:
 	echo "set tws=14*0" >> ~/.vimrc
 	echo "set background=dark" >> ~/.vimrc
 	echo "colorscheme materialbox" >> ~/.vimrc
+	echo "let g:vdebug_options.path_maps = { '/var/www': '/home/weydans/projetos/var/www' }" >> ~/.vimrc
 	echo "map <C-n> :NERDTreeToggle<cr>" >> ~/.vimrc
 	echo "set encoding=utf8" >> ~/.vimrc
 	echo "set guifont=*:h12" >> ~/.vimrc

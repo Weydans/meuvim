@@ -39,7 +39,7 @@ run:
 	git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/plugins/start/vim-airline
 	git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/plugins/start/vim-airline-themes
 	git clone https://github.com/junegunn/fzf.vim ~/.vim/pack/plugins/start/fzf.vim
-	cd ~/.vim/pack/coc/start &&	git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1 && vim -c "helptags coc.nvim/doc/ | q"
+	cd ~/.vim/pack/coc/start && git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1 && vim -c "helptags coc.nvim/doc/ | q"
 	ls ~/.fonts || mkdir ~/.fonts
 	cp ~/meuvim/DroidSansMNerdFontMono-Regular.otf ~/.fonts/
 	fc-cache	

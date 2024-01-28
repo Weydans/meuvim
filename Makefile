@@ -1,9 +1,13 @@
 run: 
 	sudo apt update && sudo apt upgrade -y
-	sudo apt remove -y vim
-	sudo apt purge -y vim
+	sudo apt remove -y vim nodejs
+	sudo apt purge -y vim nodejs
 	rm -rf ~/.vim ~/.vimrc ~/.viminfo
-	sudo apt install -y git nodejs ripgrep ncurses-dev
+	sudo apt install -y git ripgrep ncurses-dev
+	wget -O ~/Downloads/nodesource_setup.sh https://deb.nodesource.com/setup_20.x
+	sudo bash ~/Downloads/nodesource_setup.sh
+	sudo apt install -y nodejs
+	rm -rf ~/Downloads/nodesource_setup.sh
 	# Install vim ^8
 	sudo apt install -y vim 
 	# Install vim 9
@@ -39,7 +43,7 @@ run:
 	git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/plugins/start/vim-airline
 	git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/plugins/start/vim-airline-themes
 	git clone https://github.com/junegunn/fzf.vim ~/.vim/pack/plugins/start/fzf.vim
-	cd ~/.vim/pack/coc/start && git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1 && vim -c "helptags coc.nvim/doc/ | q"
+	cd ~/.vim/pack/coc/start &&	git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1 && vim -c "helptags coc.nvim/doc/ | q"
 	ls ~/.fonts || mkdir ~/.fonts
 	cp ~/meuvim/DroidSansMNerdFontMono-Regular.otf ~/.fonts/
 	fc-cache	
@@ -63,6 +67,9 @@ run:
 	echo "set tws=14*0" >> ~/.vimrc
 	echo "set background=dark" >> ~/.vimrc
 	echo "colorscheme materialbox" >> ~/.vimrc
+	echo "if !exists('g:vdebug_options')" >> ~/.vimrc
+	echo "  let g:vdebug_options = {}" >> ~/.vimrc
+	echo "endif" >> ~/.vimrc
 	echo "let g:vdebug_options.path_maps = { '/var/www': '/home/weydans/projetos/var/www' }" >> ~/.vimrc
 	echo "map <C-n> :NERDTreeToggle<cr>" >> ~/.vimrc
 	echo "set encoding=utf8" >> ~/.vimrc

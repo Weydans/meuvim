@@ -64,12 +64,14 @@ run:
 	echo "nnoremap <space> za" >> ~/.vimrc
 	echo "set splitbelow" >> ~/.vimrc
 	echo "set splitright" >> ~/.vimrc
-	echo "set tws=14*0" >> ~/.vimrc
-	echo "set background=dark" >> ~/.vimrc
-	echo "colorscheme materialbox" >> ~/.vimrc
+	echo "set tws=25*0" >> ~/.vimrc
+	echo "set background=light" >> ~/.vimrc
+	echo "colorscheme default" >> ~/.vimrc
+	echo "set wildignore+=**/vendor/**,**/node_modules/**" >> ~/.vimrc
 	echo "if !exists('g:vdebug_options')" >> ~/.vimrc
 	echo "  let g:vdebug_options = {}" >> ~/.vimrc
 	echo "endif" >> ~/.vimrc
+	echo '" let g:vdebug_options.port=9003' >> ~/.vimrc
 	echo "let g:vdebug_options.path_maps = { '/var/www': '/home/weydans/projetos/var/www' }" >> ~/.vimrc
 	echo "let g:vdebug_options.break_on_open = 0" >> ~/.vimrc
 	echo "map <C-n> :NERDTreeToggle<cr>" >> ~/.vimrc
@@ -79,7 +81,7 @@ run:
 	echo "let g:airline#extensions#tabline#enabled = 1" >> ~/.vimrc
 	echo "let g:airline_powerline_fonts = 1" >> ~/.vimrc
 	echo "let g:airline_statusline_ontop=0" >> ~/.vimrc
-	echo "let g:airline_theme='base16_twilight'" >> ~/.vimrc
+	echo "let g:airline_theme='onehalflight'" >> ~/.vimrc
 	echo "let g:airline#extensions#tabline#formatter = 'default'" >> ~/.vimrc
 	echo "nnoremap <M-Right> :bn<cr>" >> ~/.vimrc
 	echo "nnoremap <M-Left> :bp<cr>" >> ~/.vimrc

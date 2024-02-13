@@ -75,6 +75,7 @@ run:
 	echo "let g:vdebug_options.path_maps = { '/var/www': '/home/weydans/projetos/var/www' }" >> ~/.vimrc
 	echo "let g:vdebug_options.break_on_open = 0" >> ~/.vimrc
 	echo "map <C-n> :NERDTreeToggle<cr>" >> ~/.vimrc
+	echo "let g:NERDTreeWinSize=50" >> ~/.vimrc
 	echo "set encoding=utf8" >> ~/.vimrc
 	echo "set guifont=*:h12" >> ~/.vimrc
 	echo "set laststatus=2" >> ~/.vimrc

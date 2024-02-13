@@ -187,8 +187,17 @@ run:
 # IMPORTANTE
 # Instalar extensão xdebug helper no chrome
 # rodar os comandos abaixo no vim após a instalação
-# 
-# CocInstall coc-tsserver coc-phpls
+
+# CocInstall coc-phpls coc-php-cs-fixer coc-tsserver coc-eslint coc-prettier coc-json coc-git coc-css coc-xml coc-swagger 
+# CocConfig
+# Adicionar ao coc-config as linhas abaixo
+# {                                                                                                                                                                         
+#   "coc.preferences.formatOnSaveFiletypes": ["html", "js", "json", "css", "markdown"],                                   
+#   "[php]": {                                                                                                                                                              
+#     "coc.preferences.formatOnSave": true                                                                                                                                  
+#   },                                                                                                                                                                      
+# }
+
 # :packadd fzf
 # :packadd fzf.vim
 # :call fzf#install()

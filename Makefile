@@ -72,7 +72,9 @@ run:
 	echo "  let g:vdebug_options = {}" >> ~/.vimrc
 	echo "endif" >> ~/.vimrc
 	echo '" let g:vdebug_options.port=9003' >> ~/.vimrc
-	echo "let g:vdebug_options.path_maps = { '/var/www': '/home/weydans/projetos/var/www' }" >> ~/.vimrc
+	echo "let g:vdebug_options.path_maps = {" >> ~/.vimrc
+	echo "\\ '/external/project/path': '/local/project/path'" >> ~/.vimrc
+	echo "\\ }" >> ~/.vimrc
 	echo "let g:vdebug_options.break_on_open = 0" >> ~/.vimrc
 	echo "map <C-n> :NERDTreeToggle<cr>" >> ~/.vimrc
 	echo "let g:NERDTreeWinSize=50" >> ~/.vimrc

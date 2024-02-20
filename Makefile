@@ -191,11 +191,17 @@ run:
 # CocInstall coc-phpls coc-php-cs-fixer coc-tsserver coc-eslint coc-prettier coc-json coc-git coc-css coc-xml coc-swagger 
 # CocConfig
 # Adicionar ao coc-config as linhas abaixo
-# {                                                                                                                                                                         
-#   "coc.preferences.formatOnSaveFiletypes": ["html", "js", "json", "css", "markdown"],                                   
-#   "[php]": {                                                                                                                                                              
-#     "coc.preferences.formatOnSave": true                                                                                                                                  
-#   },                                                                                                                                                                      
+# {
+#   "coc.preferences.formatOnSaveFiletypes": [
+#     "php",
+#     "css",
+#     "html",
+#     "javascript",
+#     "javascript.jsx",
+#     "json",
+#     "typescript",
+#     "typescript.tsx"
+#   ]
 # }
 
 # :packadd fzf

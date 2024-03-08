@@ -37,6 +37,7 @@ run:
 	git clone https://github.com/mattn/emmet-vim ~/.vim/pack/plugins/start/emmet-vim
 	git clone https://github.com/preservim/nerdcommenter ~/.vim/pack/plugins/start/nerdcommenter
 	git clone https://github.com/rafi/awesome-vim-colorschemes ~/.vim/pack/plugins/start/awesome-vim-colorschemes
+	git clone https://github.com/dracula/vim.git ~/.vim/pack/plugins/start/dracula
 	git clone https://github.com/sheerun/vim-polyglot ~/.vim/pack/plugins/start/vim-polyglot
 	git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/plugins/start/nerdtree && vim -u NONE -c "helptags ~/.vim/pack/plugins/start/nerdtree/doc" -c q
 	git clone https://github.com/ryanoasis/vim-devicons ~/.vim/pack/plugins/start/vim-devicons 

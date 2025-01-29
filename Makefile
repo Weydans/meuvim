@@ -56,7 +56,7 @@ run:
 	echo "set history=5000" >> ~/.vimrc
 	echo "set number" >> ~/.vimrc
 	echo "set cursorline" >> ~/.vimrc
-	echo "set colorcolumn=100" >> ~/.vimrc
+	echo "set colorcolumn=120" >> ~/.vimrc
 	echo "set mouse=a" >> ~/.vimrc
 	echo "set shiftwidth=4" >> ~/.vimrc
 	echo "set tabstop=4 softtabstop=4 expandtab foldmethod=indent" >> ~/.vimrc
@@ -65,9 +65,9 @@ run:
 	echo "nnoremap <space> za" >> ~/.vimrc
 	echo "set splitbelow" >> ~/.vimrc
 	echo "set splitright" >> ~/.vimrc
-	echo "set tws=25*0" >> ~/.vimrc
-	echo "set background=light" >> ~/.vimrc
-	echo "colorscheme default" >> ~/.vimrc
+	echo "set tws=20*0" >> ~/.vimrc
+	echo "set background=dark" >> ~/.vimrc
+	echo "colorscheme OceanicNext" >> ~/.vimrc
 	echo "set wildignore+=**/vendor/**,**/node_modules/**" >> ~/.vimrc
 	echo "if !exists('g:vdebug_options')" >> ~/.vimrc
 	echo "  let g:vdebug_options = {}" >> ~/.vimrc

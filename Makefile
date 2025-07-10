@@ -44,10 +44,11 @@ run:
 	git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/plugins/start/vim-airline
 	git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/plugins/start/vim-airline-themes
 	git clone https://github.com/junegunn/fzf.vim ~/.vim/pack/plugins/start/fzf.vim
+	git clone https://github.com/dense-analysis/ale ~/.vim/pack/plugins/start/ale
 	cd ~/.vim/pack/coc/start &&	git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1 && vim -c "helptags coc.nvim/doc/ | q"
 	ls ~/.fonts || mkdir ~/.fonts
 	cp ~/meuvim/DroidSansMNerdFontMono-Regular.otf ~/.fonts/
-	fc-cache	
+	fc-cache
 	# Create .vimrc
 	touch ~/.vimrc
 	echo "syntax on" >> ~/.vimrc
@@ -77,6 +78,10 @@ run:
 	echo "\\ '/external/project/path': '/local/project/path'" >> ~/.vimrc
 	echo "\\ }" >> ~/.vimrc
 	echo "let g:vdebug_options.break_on_open = 0" >> ~/.vimrc
+	echo "let g:ale_fix_on_save = 1" >> ~/.vimrc
+	echo "let g:ale_fixers = {" >> ~/.vimrc
+	echo "\\   'php': ['php_cs_fixer']," >> ~/.vimrc
+	echo "\\}" >> ~/.vimrc
 	echo "map <C-n> :NERDTreeToggle<cr>" >> ~/.vimrc
 	echo "let g:NERDTreeWinSize=50" >> ~/.vimrc
 	echo "set encoding=utf8" >> ~/.vimrc
@@ -190,8 +195,9 @@ run:
 # IMPORTANTE
 # Instalar extensão xdebug helper no chrome
 # rodar os comandos abaixo no vim após a instalação
+# adicionar ao path caminho para a vendor de cada projeto: export PATH="$HOME/pasta-do-projeto/vendor/bin:$PATH" ao arquivo ~/.bashrc 
 
-# CocInstall coc-phpls coc-php-cs-fixer coc-tsserver coc-eslint coc-prettier coc-json coc-git coc-css coc-xml coc-swagger 
+# CocInstall coc-phpls coc-tsserver coc-eslint coc-prettier coc-json coc-git coc-css coc-xml coc-swagger 
 # CocConfig
 # Adicionar ao coc-config as linhas abaixo
 # {
